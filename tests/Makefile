@@ -1,7 +1,7 @@
 CFLAGS=-Wall -Wextra -Werror -pedantic
 CLIBS=-L. -I.
-OUTFILE=run
-CC=cc
+OUTFILE=tcc
+CC= tests/
 all: compile
 compile: 
 	mkdir -p build
@@ -10,4 +10,3 @@ run: compile
 	./$(OUTFILE)
 clean:
 	rm -v build/*
-
